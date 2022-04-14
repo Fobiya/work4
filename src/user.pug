@@ -1,0 +1,192 @@
+doctype
+
+html(lang='en')
+  head
+    
+    - var title = "Angela Yumol Coursecode"
+    - var keywords = "Keywords var keywords"
+    - var description = "Description var description"
+    title= title
+
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+    link(rel='icon', type='static/ico', href='img/favicon.ico?v=13')
+
+    meta(property='og:url', content='https:')
+    meta(property='og:image', content='img/ogg.png?v=1.3')
+    meta(property='og:image:width', content='300')
+    meta(property='og:image:height', content='300')
+
+    meta(property='og:title', content='')
+    meta(property='og:site_name', content='')
+    meta(property='og:description', content='')
+    meta(property='og:type', conten= '' + keywords + ''  )
+    meta(name='description', conten= '' + description + '' )
+    meta(name='keywords'  conten= '' + keywords + '' )
+
+  body.info(data-img='img/41.png')
+  
+    //https://www.youtube.com/embed/pv-bZ-PFog0?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fawakenedhealthacademy.com&widgetid=1
+    
+    .right__menu.account__menu
+    
+      .header__account
+        .container
+          .row
+            .col.m12.s12.l12.xl12
+              a.menu(href='javascript:;')
+                img.menu__img(src='img/user-hamburger-menu.svg', alt='menu')
+
+              a.logo(href='https://awakenedhealthacademy.com')
+                img.logo__img(src='img/logo_w.svg', alt='logo_w')
+
+
+              .box__account
+                a.link__search(href='javascript:;') 
+                  img.search__img(src='img/user-search.svg', alt='search')
+                a.bell(href='javascript:;') 
+                  img.bell__img(src='img/user-bell.svg', alt='search')
+                a.account(href='javascript:;') ACCOUNT
+    
+      a.close(href='javascript:;')
+      .box__menu
+        div.top
+          h2.title User Profile
+          ul.list
+            li.active(data-num='1')            
+              a.user-info(href='javascript:;') Account Info
+            li(data-num='2') 
+              a.user-fav(href='javascript:;') Favorites
+            li(data-num='3') 
+              a.user-watch(href='javascript:;') Watchlist
+            li(data-num='4') 
+              a.user-set(href='javascript:;') Settings
+            li(data-num='5') 
+              a.user-noti(href='javascript:;') Notifications
+            li(data-num='6') 
+              a.user-pay(href='javascript:;') Payments
+
+        a.user__btn-logout_new(href='javascript:;') Logout
+    
+    header.header__account
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            a.menu(href='javascript:;')
+              img.menu__img(src='img/user-hamburger-menu.svg', alt='menu')
+               
+            a.logo(href='https://awakenedhealthacademy.com')
+              img.logo__img(src='img/logo_w.svg', alt='logo_w')
+
+
+            .box__account
+              a.link__search(href='javascript:;') 
+                img.search__img(src='img/user-search.svg', alt='search')
+              a.bell(href='javascript:;') 
+                img.bell__img(src='img/user-bell.svg', alt='search')
+              a.account(href='javascript:;') ACCOUNT
+              
+
+          
+    section.section__.user__account
+        
+      .container
+        .row
+          .col
+            .box__menu
+              div.top
+                h2.title User Profile
+                ul.list
+                  li.active(data-num='1')           
+                    a.user-info(href='javascript:;') Account Info
+                  li(data-num='2')
+                    a.user-fav(href='javascript:;') Favorites
+                  li(data-num='3')
+                    a.user-watch(href='javascript:;') Watchlist
+                  li(data-num='4')
+                    a.user-set(href='javascript:;') Settings
+                  li(data-num='5')
+                    a.user-noti(href='javascript:;') Notifications
+                  li(data-num='6')
+                    a.user-pay(href='javascript:;') Payments
+                  
+              a.user__btn-logout_new(href='javascript:;') Logout
+                
+          .col
+          
+              ul.box__select
+                li.open
+                  .account__user
+                    .account__img
+                      img(src='img/user-img.png', alt='User Image')
+                      a.uploud.chg-img-btn(href='javascript:;')
+                    .account__name
+                      h3.name FULL NAME
+                      p.mail Email Address
+                  .account__content
+                     form(method='post', action='')
+                      input(type='hidden', value='userupdate', name='task')
+                      .account__form__row
+                        .account__form__col
+                          p.field-label Name:
+                          input#fname.field-input(type='text', name='fname', placeholder='Example', value='Tung')
+                        .account__form__col
+                          p.field-label Surname:
+                          input#lname.field-input(type='text', name='lname', placeholder='Example', value='G')
+                      .account__form__row
+                        .account__form__col
+                          p.field-label Email Address:
+                          input#eadd.field-input(type='email', name='eadd', placeholder='Example', value='gslip228@gmail.com')
+                        .account__form__col
+                          p.field-label Phone Number:
+                          input#pnum.field-input(type='tel', name='pnum', placeholder='Example', value='')
+                      .account__form__row
+                        .account__form__col
+                          p.field-label City:
+                          input#city.field-input(type='text', name='city', placeholder='Example', value='')
+                        .account__form__col
+                          p.field-label Country:
+                          input#country.field-input(type='text', name='country', placeholder='Example', value='')
+                      button.purl__smoll(type='submit', name='Save Changes') Save Changes
+
+                li
+                  .tab
+                    h3 Favorites
+                
+                
+                li
+                  .tab 
+                    h3 Watchlist
+                
+                li
+                  .tab
+                    h3 Settings
+                
+                li
+                  .tab
+                    h3 Notifications
+                    
+                li
+                  .tab
+                    h3 Payments
+                
+                
+ 
+              
+   
+
+
+
+
+
+    script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script.
+      console.log('index.pug');
+
+    
+
+
+
+

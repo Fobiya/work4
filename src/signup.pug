@@ -1,0 +1,109 @@
+doctype
+
+html(lang='en')
+  head
+    
+    - var title = "Angela Yumol Coursecode"
+    - var keywords = "Keywords var keywords"
+    - var description = "Description var description"
+    title= title
+
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+    link(rel='icon', type='static/ico', href='img/favicon.ico?v=13')
+
+    meta(property='og:url', content='https:')
+    meta(property='og:image', content='img/ogg.png?v=1.3')
+    meta(property='og:image:width', content='300')
+    meta(property='og:image:height', content='300')
+
+    meta(property='og:title', content='')
+    meta(property='og:site_name', content='')
+    meta(property='og:description', content='')
+    meta(property='og:type', conten= '' + keywords + ''  )
+    meta(name='description', conten= '' + description + '' )
+    meta(name='keywords'  conten= '' + keywords + '' )
+
+  body.info(data-img='img/41.png')
+  
+    //https://www.youtube.com/embed/pv-bZ-PFog0?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fawakenedhealthacademy.com&widgetid=1
+
+
+
+          
+    section.section__.signup__
+      .row
+        .col
+          .login__top
+            a.logo(href='/')
+              img(src='img/aha_logo.svg', alt='Awakened Health Academy Logo')
+            h1.title START YOUR JOURNEY
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt t laoreet dolore magna aliquam erat.
+            
+            img.mark(src='img/footer_login.svg', alt='Awakened Health Academy Logo', width="29") 
+
+        .col
+          .box__right
+            h2 Hi, Welcome!
+            p.sub Sign Up
+            p Already have an account? 
+              a(href='/custom-login') Login here
+            hr
+          form.signup-form(method='post', action='')
+            .signup-form__row
+              .signup-form__col
+                p.field-label Name:
+                input#fname.field-input(type='text', name='fname', placeholder='e.g. Elon', required='')
+             
+              .signup-form__col
+                p.field-label Surname:
+                input#lname.field-input(type='text', name='lname', placeholder='e.g. Mask')
+           
+            .signup-form__row
+              .signup-form__col
+                p.field-label Password:
+                input#pword.field-input(type='password', name='pword', required='')
+                a.pass__(href='#')
+             
+              .signup-form__col
+                p.field-label Confirm Password:
+                input#cpword.field-input(type='password', name='cpword', required='')
+                a.pass__(href='#')
+                
+             
+            .signup-form__col
+              p.field-label Email Address:
+              input#eadd.field-input(type='text', name='eadd', placeholder='e.g. ceo@tesla.com', required='')
+    
+            .signup-form__col
+
+              .box__input
+
+                input#tos(type='checkbox', name='tos', value='')
+ 
+
+                p I agree to platform&rsquo;s 
+                  a(href='#') Terms of Service
+                  |  and 
+                  a(href='#')
+                    | Privacy
+                    | Policy.
+                    
+            button.purl__smoll(type='submit', value='Register') Register
+
+
+
+
+
+
+    script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script.
+      console.log('index.pug');
+
+    
+
+
+
+
