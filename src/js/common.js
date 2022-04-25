@@ -674,7 +674,7 @@ for(let div of document.querySelectorAll('footer')){
             }
           },
           {
-            breakpoint: 850,
+            breakpoint: 670,
             settings: {
                 arrows: false,
                 slidesToShow: 1,
@@ -724,7 +724,7 @@ for(let div of document.querySelectorAll('footer')){
             }
           },
           {
-            breakpoint: 850,
+            breakpoint: 670,
             settings: {
                 arrows: false,
                 slidesToShow: 1,
@@ -773,7 +773,7 @@ for(let div of document.querySelectorAll('footer')){
             }
           },
           {
-            breakpoint: 850,
+            breakpoint: 670,
             settings: {
                 arrows: false,
                 slidesToShow: 1,

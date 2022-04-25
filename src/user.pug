@@ -150,18 +150,107 @@ html(lang='en')
                           input#country.field-input(type='text', name='country', placeholder='Example', value='')
                       button.purl__smoll(type='submit', name='Save Changes') Save Changes
 
-                li
+                li#memberships-tab
                   .tab
-                    h3 Favorites
-                
+                    h3 Memberships
+                    p You have not signed up for any memberships.
+                    h5 Choose Membership
+                    .rvs-area.wpvs-membership-options-list
+                      .rvs-membership-item
+                        h4 Weekly Plan
+                        p Weekly Membership
+                        label.wpvs-price 5.00USD / week
+                        a.rvs-button.rvs-primary-button(href='https://awakendhltstg.wpengine.com/checkout-2/?id=Week') Subscribe
+                      .rvs-membership-item
+                        h4 Monthly Plan
+                        p Monthly Membership
+                        label.wpvs-price 9.50USD / month
+                        a.rvs-button.rvs-primary-button(href='https://awakendhltstg.wpengine.com/checkout-2/?id=Month') Subscribe
+                      .rvs-membership-item
+                        h4 Daily Plan
+                        p Daily Membership
+                        label.wpvs-price 2.50USD / day
+                        a.rvs-button.rvs-primary-button(href='https://awakendhltstg.wpengine.com/checkout-2/?id=Daily') Subscribe
+
                 
                 li
                   .tab 
                     h3 Watchlist
-                
+                    #wpvs-account-cards.wpvs-account-section.active
+                      p No cards saved
+                      label#wpvs-show-card-form.rvs-button.rvs-primary-button Add New Card
+                      #wpvs-add-credit-card-form
+                        form#wpvs-new-stripe-card-form.wpvs-stripe-card-form(action='', method='POST')
+                          .card-container
+                            .form-container
+                              input#card_name(placeholder='Name on Card', type='text', name='card_name', data-stripe='name', required='')
+                            .form-row
+                              #wpvs-card-element.StripeElement.StripeElement--empty
+                                .__PrivateStripeElement(style='margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;')
+                                  iframe(name='__privateStripeFrame6335', frameborder='0', allowtransparency='true', scrolling='no', allow='payment *', src='https://js.stripe.com/v3/elements-inner-card-04909f1dae9792543bc4313126f54ea2.html#wait=false&mids[guid]=NA&mids[muid]=ff2b8156-c274-4424-a9c9-de78fa70e9d4697bfa&mids[sid]=NA&hidePostalCode=true&style[base][color]=%23444444&style[base][fontFamily]=%22Helvetica+Neue%22%2C+Helvetica%2C+sans-serif&style[base][fontSmoothing]=antialiased&style[base][fontSize]=16px&style[invalid][color]=%23fa755a&style[invalid][iconColor]=%23fa755a&rtl=false&componentName=card&keyMode=test&apiKey=pk_test_51KZFXnDwiy8c4YO5RlPCEcXZ1wJx8re9KpYKusTAaGM1cg0zKdvRTcYYdyIKQGw0xEcrXbruJ4kBdtJ2V4InCs5b00rwV8MTBP&referrer=https%3A%2F%2Fawakendhltstg.wpengine.com%2Fuser-account%2F&controllerId=__privateStripeController6331', title='Защищенное окно для ввода данных оплаты картой', style='border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translate(0px) !important; color-scheme: normal !important; height: 19.2px;')
+                                  input.__PrivateStripeElement-input(aria-hidden='true', aria-label=' ', autocomplete='false', maxlength='1', style='border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: -1px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;')
+                              #wpvs-card-errors.payment-errors(role='alert')
+                            #wpvs-card-permission.form-row
+                              #wpvs-card-permission-input
+                                input#wpvs_save_card_for_future(type='checkbox', name='wpvs_save_card_for_future', value='1', required='')
+                                label#wpvs-card-permission-label
+                                  | Save card for future payments             
+                                  small (required for subscriptions)
+                              #wpvs-card-permission-details
+                                p
+                                  strong Agreement:
+                                  |  I authorise Awakened Collective to send instructions to the financial institution that issued my card to take payments from my card account in accordance with the terms of my agreement with you.
+                              #wpvs-card-permission-note
+                                p
+                                  strong Note:
+                                  |  If your card requires authentication on all transactions, you may need to login to your account to pay for subscription renewals.
+                            button#wpvs-new-stripe-card.rvs-button.rvs-primary-button.rvs-pay-button(type='submit', data-secret='seti_1KqGHvDwiy8c4YO5ce8Y5lrR_secret_LXKxSRVMkodPgXWSPF0xmfx5ddLToRB') Add Card
+
                 li
                   .tab
-                    h3 Settings
+                    h3 Memberships
+                    .rwpp-memberships-list
+                      .rwpp-memberships-list-grid.rwpp-memberships-list-heading
+                        .rwpp-hide-on-mobile.rwpp-membership-item-header Membership
+                        .rwpp-hide-on-mobile.rwpp-membership-item-header Price
+                        .rwpp-hide-on-mobile.rwpp-membership-item-header Next Payment
+                        .rwpp-hide-on-mobile.membership-text-align-right.rwpp-membership-item-header Status
+                      .rwpp-membership-editor.rwpp-membership-editor-0
+                        .rwpp-memberships-list-grid
+                          .rvs-m-name
+                            span.rvs-hidden-title Name: 
+                            | Monthly Plan
+                          .rvs-m-amount
+                            span.rvs-hidden-title Price: 
+                            | 9.50USD / month
+                          .rvs-m-date
+                            span.rvs-hidden-title Next Payment: 
+                            | May 20, 2022
+                          .membership-status
+                            span.rvs-hidden-title Status: 
+                            select.wpvs-update-user-plan-status.wpvs-stripe-update-membership
+                              option(value='') Active
+                              option(value='cancel') Cancel
+                          input.membership-sub-id(type='hidden', value='', data-plan-id='Month', data-subscription-id='sub_1KqZhyDwiy8c4YO5Ub6EWfek')
+                        .rwpp-memberships-list-grid.rwpp-edit-membership-details.rwpp-hide-on-mobile.rwpp-membership-details-header.rwpp-membership-editor-0
+                          .rwpp-membership-item-header Renewal
+                          .rwpp-membership-item-header Payment Method
+                          div
+                          div
+                        .rwpp-memberships-list-grid.rwpp-edit-membership-details.rwpp-membership-details-data.rwpp-membership-editor-0
+                          .rwpp-renewal-type
+                            span.rvs-hidden-title Renewal:
+                            select.rwpp-change-renewal-type.rwpp-membership-select(data-subscription='sub_1KqZhyDwiy8c4YO5Ub6EWfek')
+                              option(value='automatic', selected='selected') Automatic
+                              option(value='invoice') Send Invoice
+                          .rwpp-payment-method
+                            span.rvs-hidden-title Payment Method:
+                            select.rwpp-change-payment-method.rwpp-membership-select(data-subscription='sub_1KqZhyDwiy8c4YO5Ub6EWfek')
+                              option(value='pm_1KqZhvDwiy8c4YO5yW6dx09i', selected='selected') ****4242
+                          .rwpp-hide-on-mobile
+                          .rvs-remove-edit(data-removeid='rwpp-membership-editor-0')
+                            label.removeMembership.deleteNow(data-subscription-id='sub_1KqZhyDwiy8c4YO5Ub6EWfek') Delete
+
                 
                 li
                   .tab
