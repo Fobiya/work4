@@ -2041,6 +2041,19 @@ section,footer{
       min-height: 1080px;
       max-height: 1080px;
         overflow: hidden;
+     
+     
+     &.search{
+         
+         @include wid(992){  padding-top: 150px;  min-height: 500px;  max-height: 500px; }
+         
+           @include wid(601-991) {  padding: 70px 0;  }
+         
+           @include wid(600)  {  padding: 48px  0;  }
+
+             &>.container:nth-child(2){  background: transparent !important;  }
+         
+     }
    
 
    
@@ -2132,9 +2145,9 @@ section,footer{
    
   @include wid(600)       {  
        padding-top: 130px;
-            .container{
+      .container{
 //         padding-top: 133px;
-                        padding-bottom: 48px;
+         padding-bottom: 48px;
       }
     
    
@@ -2223,7 +2236,9 @@ section,footer{
             }
             
           }
-        }        
+        }    
+          
+          
         &>div:nth-child(2){
 
           
@@ -4896,7 +4911,7 @@ section,footer{
         background: #0b0a0d !important;
 //        padding-top: 150px; 
 //        padding-bottom: 100px; 
-            min-height: 100vh;
+            min-height: inherit;
      } 
    
    
@@ -4998,6 +5013,8 @@ section,footer{
         margin-bottom: 10px;
         
         text-transform: uppercase;
+          
+          max-width: 550px;
 
         @include wid(992)  {  font: 100 60px/1.22em var(--v); }
         @include wid(601-991)  {  font: 100 50px/1.22em var(--v); }
@@ -5028,6 +5045,10 @@ section,footer{
     border: 1px solid #e8d7ac;
     color: #e8d7ac;
     padding: 0;
+         
+         &.remove{
+             margin-right: 10px;
+         }
        
        .dashicons{
           width: 30px;
@@ -5038,7 +5059,7 @@ section,footer{
           align-items: center;
           color: #e8d7ac;
           padding: 0;
-            padding-right: 10px;
+    
          
          .dashicons-plus:before {
               padding-top: 3px;
@@ -5303,6 +5324,9 @@ section,footer{
        
        margin-bottom: 16px;
            transition: all .5s ease;
+   height: 118px;
+    overflow: hidden;
+         
        
        &>span{
          
@@ -5998,20 +6022,35 @@ section,footer{
        
        
          .images__{
-           
+            @include wid(992)      {
            max-width: 150px; min-width: 150px;
+                
+             }
            
              @include wid(600) {   max-width: 120px; min-width: 120px;}
+             
+             @include wid(991)      { padding: 0 5px;
+             
+                 .images{
+                     max-width: 110px;
+                     min-width: 110px;
+                     margin: 0 auto;
+                 }
+             }
 
          }
        
        .info__{
+           
+           
          display: flex;
          justify-content: center;
          align-items: center;
          flex-direction: column;
          
              @include wid(600) { padding-left: 10px; }
+           
+                 @include wid(991)      { padding: 0 10px; }
          
          .logo__slider{
            margin-bottom: 20px;
@@ -9036,23 +9075,42 @@ background: #fffaf5!important;
       pointer-events: none;
       z-index: 4;
     }
-
-    &:after{
-      @extend %bef-aft;
-
-      position: absolute;
-      pointer-events: none;
-      background: #fffaf5;
-
-      top:0px;
-      width: 100%;
-      z-index: 1;
       
-      @include wid(992){  height: 235px; }
-      @include wid(601-991){ height: 105px; }
-      @include wid(600) { height: 105px; }
+      
+      
+      &.home{
+        &:after{
+          @extend %bef-aft;    
+
+          position: absolute;
+          pointer-events: none;
+          background: #fffaf5;
+
+          top:0px;
+          width: 100%;
+          z-index: 1;
+
+          @include wid(992){  height: 235px; }
+          @include wid(601-991){ height: 105px; }
+          @include wid(600) { height: 105px; }
+        }
     }
-    
+      
+              &:after{
+          @extend %bef-aft;    
+
+          position: absolute;
+          pointer-events: none;
+          background: #fff;
+
+          top:0px;
+          width: 100%;
+          z-index: 1;
+
+          @include wid(992){  height: 235px; }
+          @include wid(601-991){ height: 105px; }
+          @include wid(600) { height: 105px; }
+        }
     
     
     @include wid(992){ 
@@ -9105,24 +9163,22 @@ background: #fffaf5!important;
     
 
     &>.container:nth-child(1)>.row>div:nth-child(3){
-    h3{
-    @include wid(1500){ 
-    text-align: right;
-    margin-right: 0px;
-    margin-bottom: 30px;
-    }
-    }
+        h3{
+            @include wid(1500){ 
+            text-align: right;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            }
+        }
     }
 
     &>.container:nth-child(1)>.row>div:nth-child(2){
-    h3{
-    @include wid(1200-1499){ margin-left: -40px; }
-    }
-    a{
-    @include wid(1200-1499){ font: 100 13px/1.2em var(--l); margin-left: -40px; }
-
-
-    }
+        h3{
+           @include wid(1200-1499){ margin-left: -40px; }
+        }
+        a{
+           @include wid(1200-1499){ font: 100 13px/1.2em var(--l); margin-left: -40px; }
+        }
 
     }
 
@@ -9185,9 +9241,9 @@ background: #fffaf5!important;
     h3{
       color: #E8D7AC;
       
-      @include wid(992)   {   font: 100 22px/1.2em var(--v);     margin-bottom: 25px; } 
-      @include wid(601-991)  {   font: 100 22px/1.2em var(--v);     margin-bottom: 15px; } 
-      @include wid(600)       {   font: 100 22px/1.2em var(--v);  margin-bottom: 12px; } 
+      @include wid(992)   {   font: 100 22px/1.2em var(--v); margin-bottom: 25px; } 
+      @include wid(601-991)  {   font: 100 22px/1.2em var(--v); margin-bottom: 15px; } 
+      @include wid(600)       {   font: 100 22px/1.2em var(--v); margin-bottom: 12px; } 
 
   
       text-transform: uppercase;
@@ -9216,14 +9272,14 @@ background: #fffaf5!important;
         display: flex;
        
         
-           @include wid(992)  {    justify-content: flex-start; } 
+           @include wid(992)  {    justify-content: flex-start;         margin-bottom: 25px;  } 
            @include wid(991)  { width:  auto;    flex-basis: auto; margin-right: 30px; justify-content: flex-end; align-items: flex-end;
         
              img{
                max-height: 24px;
              }
         } 
-        margin-bottom: 25px;
+
       }
     }
     
